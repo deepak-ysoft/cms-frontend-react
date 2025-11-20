@@ -1,0 +1,13 @@
+/* Hide blinking cursor globally */
+* {
+   caret-color: transparent !important;
+}
+
+/* ✅ Show caret only in editable elements */
+input,
+textarea,
+[contenteditable="true"],
+.MuiInputBase-input,
+.MuiOutlinedInput-input {
+   caret-color: auto !important;
+}

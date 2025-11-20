@@ -1,0 +1,9 @@
+/* src/Pages/Auth/Login.css */
+
+
+
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+}

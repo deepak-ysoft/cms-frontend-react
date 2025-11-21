@@ -282,6 +282,8 @@ export function Contracts({ projectId }) {
                           ? "success.main"
                           : contract.status === "Completed"
                           ? "text.primary"
+                          : contract.status === "Ended"
+                          ? "warning"
                           : "error.main"
                       }
                     >

@@ -118,7 +118,6 @@ export default function NotificationsPage() {
     }
   };
 
-  console.log("selected", selected);
   // --------------------------------------------------------
   // LEFT PANEL: Notification List Component
   // --------------------------------------------------------

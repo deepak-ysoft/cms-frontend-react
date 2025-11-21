@@ -131,8 +131,6 @@ function WorkLogDetails() {
       icon: <AccessTime sx={{ color: "primary.main" }} />,
     },
   ];
-  console.log("workLog?.attachments", workLog?.attachments);
-  console.log("fileUrl", fileUrl);
   return (
     <Paper
       sx={{

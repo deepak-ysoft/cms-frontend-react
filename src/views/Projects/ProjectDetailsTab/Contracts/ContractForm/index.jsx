@@ -29,6 +29,7 @@ const ContractForm = ({ projectId, onSubmit, contract }) => {
     currency: "INR",
     startDate: "",
     endDate: "",
+    status: "Active",
     file: null,
   });
 
@@ -43,6 +44,7 @@ const ContractForm = ({ projectId, onSubmit, contract }) => {
         currency: contract.currency || "INR",
         startDate: contract.startDate ? contract.startDate.split("T")[0] : "",
         endDate: contract.endDate ? contract.endDate.split("T")[0] : "",
+        status: contract.status || "Active",
         file: null, // file cannot be pre-filled
       });
     }
@@ -154,6 +156,7 @@ const ContractForm = ({ projectId, onSubmit, contract }) => {
     formData.append("billingType", editData.billingType);
     formData.append("startDate", editData.startDate);
     formData.append("endDate", editData.endDate);
+    formData.append("status", editData.status);
     formData.append("fixedAmount", editData.fixedAmount || 0);
     if (file) formData.append("file", file);
 
@@ -261,6 +264,25 @@ const ContractForm = ({ projectId, onSubmit, contract }) => {
               error={!!errors.endDate}
               helperText={errors.endDate}
             />
+          </Grid>
+
+          {/* Status */}
+          <Grid sx={{ width: { xs: "100%", md: "48%" } }}>
+            <TextField
+              select
+              label="Status"
+              value={editData.status}
+              onChange={(e) =>
+                setFormData({ ...editData, status: e.target.value })
+              }
+              fullWidth
+              size="small"
+            >
+              <MenuItem value="Active">Active</MenuItem>
+              <MenuItem value="Completed">Completed</MenuItem>
+              <MenuItem value="Cancelled">Cancelled</MenuItem>
+              <MenuItem value="Ended">Ended</MenuItem>
+            </TextField>
           </Grid>
 
           {/* Billing Type */}

@@ -149,6 +149,7 @@ function ContractList() {
     Active: "info",
     Completed: "success",
     Cancelled: "error",
+    Ended: "warning",
   };
 
   // 🔹 Table columns
@@ -297,7 +298,7 @@ function ContractList() {
             <>
               <IconButton
                 title="View"
-                onClick={() => navigate(`/contracts/contractDetails/${row.id}`)}
+                onClick={() => navigate(`/contracts/details/${row.id}`)}
                 sx={{ color: "primary.main" }}
               >
                 <FaEye size={18} />
@@ -402,6 +403,7 @@ function ContractList() {
                 <option value="Active">Active</option>
                 <option value="Completed">Completed</option>
                 <option value="Cancelled">Cancelled</option>
+                <option value="Ended">Ended</option>
               </select>
             </Box>
           </Box>

@@ -13,10 +13,13 @@ export const SocketProvider = ({ children }) => {
 
   // Connect socket
   useEffect(() => {
-    socketRef.current = io("http://localhost:1100", {
+    // socketRef.current = io("http://localhost:1100", {
+    //   transports: ["websocket"],
+    // });
+    socketRef.current = io(import.meta.env.VITE_BACKEND_WS_URL, {
       transports: ["websocket"],
+      withCredentials: true,
     });
-
     return () => {
       socketRef.current.disconnect();
     };

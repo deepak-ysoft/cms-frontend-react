@@ -101,7 +101,6 @@ function AppRouter() {
               path="/projects/ProjectDetails/:id/:tab?"
               element={<ProjectDetailsTab />}
             />
-
             <Route
               path="/projects/ProjectDetails/:projectId/invocies/createInvoice/:mode"
               element={<InvoiceForm />}
@@ -114,20 +113,16 @@ function AppRouter() {
               path="/projects/ProjectDetails/:projectId/invocies/invoiceDetails/:id"
               element={<InvoiceDetails />}
             />
-
             <Route path="AllInvoiceList" />
-
             <Route path="/invocies" element={<AllInvoiceList />} />
-
             <Route
-              path="/invocies/updateInvoice/:mode/:projectId/:id"
+              path="/invocies/updateInvoice/:mode/:id"
               element={<InvoiceForm />}
             />
             <Route
               path="/invocies/invoiceDetails/:id"
               element={<InvoiceDetails />}
             />
-
             <Route
               path="/developerDashboard"
               element={<DeveloperDashboard />}

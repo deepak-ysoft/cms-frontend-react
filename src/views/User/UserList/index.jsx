@@ -302,7 +302,7 @@ function UserList() {
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        p: { xs: 1, sm: 2, md: 5 },
+        p: { xs: 1.5, sm: 2, md: 5 },
         backgroundColor: "#f9fafc",
       }}
     >

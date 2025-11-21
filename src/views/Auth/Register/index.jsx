@@ -72,6 +72,27 @@ function Register() {
       type: "password",
       required: true,
     },
+    {
+      name: "experience",
+      label: "Experience",
+      type: "number",
+      required: true,
+    },
+    {
+      name: "department",
+      label: "Department",
+      required: true,
+      type: "select",
+      options: [
+        { label: "Frontend", value: "Frontend" },
+        { label: "Backend", value: "Backend" },
+        { label: "Fullstack", value: "Fullstack" },
+        { label: "Mobile", value: "Mobile" },
+        { label: "UI/UX", value: "UI/UX" },
+        { label: "DevOps", value: "DevOps" },
+        { label: "QA", value: "QA" },
+      ],
+    },
   ];
 
   const handleSubmit = async (data) => {
@@ -119,7 +140,8 @@ function Register() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        px: { xs: 1, md: 2 },
+        px: 2,
+        my: 5,
       }}
     >
       <Paper

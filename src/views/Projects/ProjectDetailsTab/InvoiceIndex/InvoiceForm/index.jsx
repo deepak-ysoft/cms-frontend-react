@@ -162,7 +162,7 @@ export default function InvoiceForm() {
   };
 
   return (
-    <Paper sx={{ pb: 3, borderRadius: 3, boxShadow: 3, m: 5 }}>
+    <Paper sx={{ pb: 3, borderRadius: 3, boxShadow: 3, m: {xs:1.5,md:5} }}>
       <Box
         display="flex"
         justifyContent="space-between"

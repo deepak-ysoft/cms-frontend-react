@@ -258,9 +258,7 @@ export default function AllInvoiceList() {
                     title="Edit"
                     color="secondary"
                     onClick={() =>
-                      navigate(
-                        `/invocies/updateInvoice/edit/${row.projectId}/${row._id}`
-                      )
+                      navigate(`/invocies/updateInvoice/edit/${row._id}`)
                     }
                   >
                     <FaEdit size={18} />
@@ -291,7 +289,7 @@ export default function AllInvoiceList() {
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        p: { xs: 1, md: 5 },
+        p: { xs: 1.5, md: 5 },
         backgroundColor: "#f9fafc",
       }}
     >

@@ -536,7 +536,7 @@ Kindly review the project details and begin planning task distribution, timeline
           minHeight: "calc(100vh - 180px)",
           display: "flex",
           justifyContent: "center",
-          p: { xs: 1, md: 5 },
+          p: { xs: 1.5, md: 5 },
           backgroundColor: "#f9fafc",
         }}
       >

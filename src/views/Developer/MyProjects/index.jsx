@@ -203,7 +203,7 @@ function MyProjects() {
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        p: { xs: 1, md: 5 },
+        p: { xs: 1.5, md: 5 },
         backgroundColor: "#f9fafc",
       }}
     >

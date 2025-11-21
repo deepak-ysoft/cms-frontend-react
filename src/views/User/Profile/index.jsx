@@ -266,7 +266,7 @@ function Profile() {
   ];
 
   return (
-    <Box sx={{ p: { xs: 1, md: 5 } }}>
+    <Box sx={{ p: { xs: 1.5, md: 5 } }}>
       <Card sx={{ borderRadius: 3, boxShadow: 1 }}>
         {!editMode && (
           <Box sx={{ px: { xs: 2, md: 4 }, py: 3 }}>

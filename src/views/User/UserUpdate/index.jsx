@@ -267,7 +267,7 @@ function UserUpdate({ mode = "create" }) {
   };
 
   return (
-    <Box p={5}>
+    <Box sx={{ p: { xs: 1.5, md: 5 } }}>
       <Paper elevation={3} sx={{ borderRadius: 3 }}>
         <Box
           display="flex"

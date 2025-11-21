@@ -61,7 +61,7 @@ function ProjectDetailsTab() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          p: { xs: 1, md: 5 },
+          p: { xs: 1.5, md: 5 },
           boxShadow: 1,
         }}
       >

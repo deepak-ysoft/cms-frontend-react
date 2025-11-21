@@ -125,7 +125,7 @@ export default function NotificationsPage() {
     <StyledCard
       sx={{
         // Enforce the height for a desktop mail-client look
-        height: isMobile ? "auto" : "calc(100vh - 150px)",
+        height: "calc(100vh - 150px)",
         // Use requested responsive styling pattern
         width: { xs: "100%", md: "100%" },
       }}
@@ -168,7 +168,7 @@ export default function NotificationsPage() {
         ) : (
           <List
             sx={{
-              maxHeight: isMobile ? 400 : "calc(100vh - 200px)",
+              maxHeight: "calc(100vh - 200px)",
               overflowY: "auto",
               p: 0,
             }}
@@ -249,7 +249,7 @@ export default function NotificationsPage() {
   const NotificationDetailsComponent = (
     <StyledCard
       sx={{
-        height: isMobile ? "auto" : "calc(100vh - 150px)",
+        height: "calc(100vh - 150px)",
         overflowY: "auto",
         // Use requested responsive styling pattern
         width: { xs: "100%", md: "100%" },
@@ -266,7 +266,7 @@ export default function NotificationsPage() {
           </Button>
         </CardActions>
       )}
-      <CardContent sx={{ p: 4, height: "100%" }}>
+      <CardContent sx={{ p: 4, height: "calc(100vh - 200px)" }}>
         {selected ? (
           <Box>
             <Typography variant="h5" fontWeight={700} gutterBottom>
@@ -370,7 +370,7 @@ export default function NotificationsPage() {
     // Outer container for padding and background
     <Box
       sx={{
-        p: { xs: 1, md: 4 },
+        p: { xs: 1.5, md: 5 },
       }}
     >
       <Grid container sx={{ boxShadow: 1, borderRadius: 3 }}>

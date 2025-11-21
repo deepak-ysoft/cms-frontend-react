@@ -136,7 +136,7 @@ function WorkLogDetails() {
       sx={{
         borderRadius: 3,
         backgroundColor: "#fff",
-        m: { xs: 1, md: 5 },
+        m: { xs: 1.5, md: 5 },
       }}
     >
       {/* 🔹 HEADER */}

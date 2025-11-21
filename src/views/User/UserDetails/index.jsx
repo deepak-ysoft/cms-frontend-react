@@ -127,7 +127,7 @@ function UserDetails() {
         width: "100%",
         minHeight: "calc(100vh - 120px)",
 
-        p: { xs: 1, md: 5 },
+        p: { xs: 1.5, md: 5 },
         backgroundColor: "#f9fafc",
       }}
     >

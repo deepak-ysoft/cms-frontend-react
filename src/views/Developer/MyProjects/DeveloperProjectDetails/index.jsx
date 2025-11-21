@@ -71,7 +71,7 @@ const DeveloperProjectDetails = () => {
   return (
     <Box
       sx={{
-        p: { xs: 1, md: 5 },
+        p: { xs: 1.5, md: 5 },
         backgroundColor: "#f9fafc",
         minHeight: "calc(100vh - 120px)",
         display: "flex",

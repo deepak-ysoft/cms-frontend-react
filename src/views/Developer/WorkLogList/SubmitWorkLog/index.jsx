@@ -220,7 +220,7 @@ If you notice any discrepancies, kindly reach out to your project manager or adm
   //   );
 
   return (
-    <Paper sx={{ m: { xs: 1, md: 5 }, pb: 3, borderRadius: 3, boxShadow: 3 }}>
+    <Paper sx={{ m: { xs: 1.5, md: 5 }, pb: 3, borderRadius: 3, boxShadow: 3 }}>
       {/* Header */}
       <Box
         display="flex"

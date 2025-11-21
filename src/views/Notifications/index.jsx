@@ -18,7 +18,6 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
-import { Image_BASE_URL } from "../../api/config";
 import {
   getNotifications,
   markNotificationRead,
@@ -205,7 +204,7 @@ export default function NotificationsPage() {
                       <Avatar
                         src={
                           n.type !== "system" && n.sender?.profileImage
-                            ? `${Image_BASE_URL}${n.sender?.profileImage}`
+                            ? `${n.sender?.profileImage}`
                             : ""
                         }
                       >
@@ -284,7 +283,7 @@ export default function NotificationsPage() {
               <Avatar
                 src={
                   selected.type !== "system" && selected.sender?.profileImage
-                    ? `${Image_BASE_URL}${selected.sender.profileImage}`
+                    ? `${selected.sender.profileImage}`
                     : ""
                 }
               >

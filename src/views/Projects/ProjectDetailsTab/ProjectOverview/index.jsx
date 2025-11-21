@@ -33,7 +33,6 @@ import {
   removeDeveloperFromProject,
 } from "../../../../api/ProjectApi";
 import { getUsers } from "../../../../api/userApi";
-import { Image_BASE_URL } from "../../../../api/config";
 import { formatDateTime } from "../../../../utils/formatDateTime";
 import { PictureAsPdf, Image, InsertDriveFile } from "@mui/icons-material";
 import ImagePreviewModal from "../../../../shared/components/reusableComponent/ImagePreviewModal";
@@ -109,7 +108,7 @@ const UserItem = ({ user, selectedDevelopers = [], onSelect }) => {
       />
 
       <Avatar
-        src={user?.profileImage ? `${Image_BASE_URL}${user?.profileImage}` : ""}
+        src={user?.profileImage ? `${user?.profileImage}` : ""}
         alt={user.fullName}
         sx={{ width: 32, height: 32, fontSize: 14 }}
       />
@@ -139,11 +138,7 @@ const DeveloperCard = ({ developer, onDelete }) => (
   >
     <Box display="flex" alignItems="center" gap={1.5}>
       <Avatar
-        src={
-          developer?.profileImage
-            ? `${Image_BASE_URL}${developer?.profileImage}`
-            : ""
-        }
+        src={developer?.profileImage ? `${developer?.profileImage}` : ""}
         alt={developer.fullName}
         sx={{ width: 36, height: 36, fontSize: 14 }}
       />
@@ -845,7 +840,7 @@ If you believe this change was made in error or need further clarification, plea
           {project.attachments?.length > 0 ? (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1.5 }}>
               {project.attachments.map((a) => {
-                const fileUrl = `${Image_BASE_URL}${a.url}`;
+                const fileUrl = `${a.url}`;
                 const isImage = /\.(png|jpe?g|gif|webp)$/i.test(a.url);
 
                 return (
@@ -904,10 +899,7 @@ If you believe this change was made in error or need further clarification, plea
             <Avatar
               src={
                 project.manager?.profileImage
-                  ? `${Image_BASE_URL.replace(
-                      /\/$/,
-                      ""
-                    )}/${project.manager?.profileImage.replace(/^\//, "")}`
+                  ? `${project.manager?.profileImage}`
                   : ""
               }
               alt={project.manager?.fullName}

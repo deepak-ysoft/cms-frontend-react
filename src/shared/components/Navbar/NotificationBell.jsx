@@ -17,7 +17,6 @@ import {
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
 import { useSocket } from "../../context/SocketContext";
-import { Image_BASE_URL } from "../../../api/config";
 import {
   markNotificationRead,
   markAllRead,
@@ -125,7 +124,7 @@ export default function NotificationBell() {
                 <Avatar
                   src={
                     n.type !== "system" && n.sender?.profileImage
-                      ? `${Image_BASE_URL}${n.sender.profileImage}`
+                      ? `${n.sender.profileImage}`
                       : ""
                   }
                 >

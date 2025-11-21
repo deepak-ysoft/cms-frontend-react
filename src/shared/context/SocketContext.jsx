@@ -13,7 +13,7 @@ export const SocketProvider = ({ children }) => {
 
   // Connect socket
   useEffect(() => {
-    socketRef.current = io("http://localhost:5000", {
+    socketRef.current = io("http://localhost:1100", {
       transports: ["websocket"],
     });
 

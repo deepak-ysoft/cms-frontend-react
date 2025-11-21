@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Box, Avatar, IconButton, Tooltip } from "@mui/material";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Image_BASE_URL } from "../../../../api/config";
 
 function UploadImage({
   formData,
@@ -24,7 +23,7 @@ function UploadImage({
 
     // Show existing image
     if (formData?.profileImage) {
-      setPreview(`${Image_BASE_URL}${formData?.profileImage}`);
+      setPreview(`${formData?.profileImage}`);
     }
   }, [selectedImage, formData]);
 

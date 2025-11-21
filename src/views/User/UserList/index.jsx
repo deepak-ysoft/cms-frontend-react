@@ -20,7 +20,6 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { showToast } from "../../../utils/toastHelper";
-import { Image_BASE_URL } from "../../../api/config";
 
 // ✅ Reusable components
 import ReusableTable from "../../../shared/components/reusableComponent/Table";
@@ -254,7 +253,7 @@ function UserList() {
         user: (
           <Box display="flex" alignItems="center" gap={1}>
             <Avatar
-              src={u.profileImage ? `${Image_BASE_URL}${u.profileImage}` : ""}
+              src={u.profileImage ? `${u.profileImage}` : ""}
               alt={name}
               sx={{ width: avatarSize, height: avatarSize }}
             />
@@ -281,7 +280,7 @@ function UserList() {
     return {
       photo: (
         <Avatar
-          src={u.profileImage ? `${Image_BASE_URL}${u.profileImage}` : ""}
+          src={u.profileImage ? `${u.profileImage}` : ""}
           alt={name}
           sx={{ width: 36, height: 36 }}
         />

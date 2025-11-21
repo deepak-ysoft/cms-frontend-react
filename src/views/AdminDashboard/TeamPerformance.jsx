@@ -9,7 +9,6 @@ import {
   Avatar,
 } from "@mui/material";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
-import { Image_BASE_URL } from "../../api/config";
 
 const DEPARTMENT_COLORS = {
   Frontend: "#4f96deff",
@@ -241,11 +240,7 @@ export default function TeamPerformance({ performance }) {
                   {/* Left side (Avatar + Name) */}
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
                     <Avatar
-                      src={
-                        dev?.profileImage
-                          ? `${Image_BASE_URL}${dev.profileImage}`
-                          : ""
-                      }
+                      src={dev?.profileImage ? `${dev.profileImage}` : ""}
                       alt={dev.name}
                       sx={{
                         width: 42,

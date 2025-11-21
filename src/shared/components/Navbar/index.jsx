@@ -18,7 +18,6 @@ import { useNavigate } from "react-router-dom";
 import { userProfile } from "../../../api/userApi";
 import UserContext from "../../context/UserContext";
 import WelcomeHeader from "../reusableComponent/WelcomeHeader";
-import { Image_BASE_URL } from "../../../api/config";
 import LogoutDialog from "../Logout";
 import NotificationBell from "./NotificationBell";
 
@@ -158,11 +157,7 @@ export default function NavBar({ onToggleSidebar, open }) {
               color="inherit"
             >
               <Avatar
-                src={
-                  user?.profileImage
-                    ? `${Image_BASE_URL}${user?.profileImage}`
-                    : ""
-                }
+                src={user?.profileImage ? `${user?.profileImage}` : ""}
                 sx={{ color: "inherit", width: 32, height: 32 }}
               />
             </IconButton>

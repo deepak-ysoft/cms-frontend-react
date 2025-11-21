@@ -44,8 +44,6 @@ export function Contracts({ projectId }) {
   const navigate = useNavigate();
   const role = localStorage.getItem("role");
 
-  const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
-
   const fetchContracts = async () => {
     try {
       setLoading(true);
@@ -170,7 +168,7 @@ export function Contracts({ projectId }) {
           {contracts.map((contract) => {
             const fileUrl = contract.fileUrl.startsWith("http")
               ? contract.fileUrl
-              : `${imageBaseUrl}${contract.fileUrl}`;
+              : `${contract.fileUrl}`;
 
             return (
               <Grid

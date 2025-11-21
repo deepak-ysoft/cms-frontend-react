@@ -35,7 +35,6 @@ export default function InvoiceDetails() {
   const { id } = useParams();
   const [invoiceData, setInvoiceData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
   const navigate = useNavigate();
   useEffect(() => {
     const fetchInvoice = async () => {
@@ -147,7 +146,7 @@ export default function InvoiceDetails() {
 
   const fileUrl = invoiceData.fileUrl?.startsWith("http")
     ? invoiceData.fileUrl
-    : `${imageBaseUrl}${invoiceData.fileUrl}`;
+    : `${invoiceData.fileUrl}`;
 
   return (
     <Paper

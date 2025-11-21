@@ -37,10 +37,9 @@ function WorkLogDetails() {
   const handleOpenImage = (imgUrl) => setSelectedImage(imgUrl);
   const handleCloseImage = () => setSelectedImage(null);
   const isImage = /\.(png|jpe?g|gif|webp)$/i.test(workLog?.attachments);
-  const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
   const fileUrl = workLog?.attachments?.startsWith("http")
     ? workLog?.attachments
-    : `${imageBaseUrl}${workLog?.attachments}`;
+    : `${workLog?.attachments}`;
 
   // ✅ Fetch Work Log by ID
   useEffect(() => {
@@ -132,7 +131,8 @@ function WorkLogDetails() {
       icon: <AccessTime sx={{ color: "primary.main" }} />,
     },
   ];
-
+  console.log("workLog?.attachments", workLog?.attachments);
+  console.log("fileUrl", fileUrl);
   return (
     <Paper
       sx={{

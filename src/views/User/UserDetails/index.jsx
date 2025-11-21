@@ -14,7 +14,6 @@ import {
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router-dom";
 import { detailsUser } from "../../../api/userApi";
-import { Image_BASE_URL } from "../../../api/config";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import CakeIcon from "@mui/icons-material/Cake";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
@@ -204,7 +203,7 @@ function UserDetails() {
             alignItems="center"
           >
             <Avatar
-              src={`${Image_BASE_URL}${userData?.profileImage || ""}`}
+              src={`${userData?.profileImage || ""}`}
               sx={{
                 width: 130,
                 height: 130,

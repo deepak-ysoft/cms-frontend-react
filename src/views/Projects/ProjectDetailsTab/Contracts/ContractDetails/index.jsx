@@ -33,7 +33,6 @@ function ContractDetails() {
   const navigate = useNavigate();
   const [contract, setContract] = useState(null);
   const [loading, setLoading] = useState(true);
-  const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleOpenImage = (imgUrl) => setSelectedImage(imgUrl);
@@ -126,7 +125,7 @@ function ContractDetails() {
   ];
   const fileUrl = contract.fileUrl.startsWith("http")
     ? contract.fileUrl
-    : `${imageBaseUrl}${contract.fileUrl}`;
+    : `${contract.fileUrl}`;
   return (
     <Box
       sx={{

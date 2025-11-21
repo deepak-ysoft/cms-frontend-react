@@ -12,7 +12,6 @@ import {
   Chip,
 } from "@mui/material";
 import { userProfile, updateUser, deleteUserImg } from "../../../api/userApi";
-import { Image_BASE_URL } from "../../../api/config";
 import Form from "../../../shared/components/reusableComponent/Form";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import CakeIcon from "@mui/icons-material/Cake";
@@ -55,7 +54,7 @@ function Profile() {
   // update selectedImage when profile loads
   useEffect(() => {
     if (profile?.profileImage) {
-      setSelectedImage(`${Image_BASE_URL}${profile?.profileImage}`);
+      setSelectedImage(`${profile?.profileImage}`);
     }
   }, [profile]);
   if (profileLoading)
@@ -176,7 +175,6 @@ function Profile() {
       if (!updated.isSuccess) {
         showToast("error", updated.message);
       } else {
-        
         setEditMode(false);
         fetchProfile();
       }
@@ -309,7 +307,7 @@ function Profile() {
                 alignItems="center"
               >
                 <Avatar
-                  src={`${Image_BASE_URL}${profile?.profileImage || ""}`}
+                  src={`${profile?.profileImage || ""}`}
                   sx={{
                     width: 130,
                     height: 130,

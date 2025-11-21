@@ -12,7 +12,6 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { getDeveloperProjectDetails } from "../../../../api/ProjectApi";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { Image_BASE_URL } from "../../../../api/config";
 import { formatDateTime } from "../../../../utils/formatDateTime";
 
 const DeveloperProjectDetails = () => {
@@ -228,11 +227,7 @@ const DeveloperProjectDetails = () => {
                 textAlign={{ xs: "center", sm: "left" }}
               >
                 <Avatar
-                  src={
-                    project.manager.image
-                      ? `${Image_BASE_URL}${project.manager.image}`
-                      : ""
-                  }
+                  src={project.manager.image ? `${project.manager.image}` : ""}
                   alt={project.manager.name}
                   sx={{ width: 60, height: 60 }}
                 />
@@ -311,7 +306,7 @@ const DeveloperProjectDetails = () => {
                       }}
                     >
                       <Avatar
-                        src={dev.image ? `${Image_BASE_URL}${dev.image}` : ""}
+                        src={dev.image ? `${dev.image}` : ""}
                         alt={dev.name}
                       />
                       <Box sx={{ wordBreak: "break-word" }}>

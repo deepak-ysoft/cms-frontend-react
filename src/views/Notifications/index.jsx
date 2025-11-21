@@ -125,7 +125,7 @@ export default function NotificationsPage() {
     <StyledCard
       sx={{
         // Enforce the height for a desktop mail-client look
-        height: "calc(100vh - 150px)",
+        height: "calc(100vh - 160px)",
         // Use requested responsive styling pattern
         width: { xs: "100%", md: "100%" },
       }}
@@ -249,7 +249,7 @@ export default function NotificationsPage() {
   const NotificationDetailsComponent = (
     <StyledCard
       sx={{
-        height: "calc(100vh - 150px)",
+        height: "calc(100vh - 160px)",
         overflowY: "auto",
         // Use requested responsive styling pattern
         width: { xs: "100%", md: "100%" },

@@ -12,7 +12,7 @@ const OverviewCard = ({ icon, title, value, subtitleData = [] }) => {
         borderRadius: 4,
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)",
         overflow: "hidden",
-        p: 2.5,
+        p: 2.25,
         background:
           "linear-gradient(145deg, rgba(255,255,255,0.9), rgba(245,247,250,0.8))",
         transition: "transform 0.25s ease, box-shadow 0.25s ease",

@@ -55,14 +55,14 @@ function Login() {
       label: "Email Address",
       type: "email",
       required: true,
-      defaultValue: savedEmail || "admin@yopmail.com",
+      defaultValue: savedEmail,
     },
     {
       name: "password",
       label: "Password",
       type: "password",
       required: true,
-      defaultValue: savedPassword || "Admin@1234",
+      defaultValue: savedPassword,
     },
     {
       name: "rememberMe",
@@ -125,7 +125,7 @@ function Login() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        px: 2 ,
+        px: 2,
       }}
     >
       <Paper

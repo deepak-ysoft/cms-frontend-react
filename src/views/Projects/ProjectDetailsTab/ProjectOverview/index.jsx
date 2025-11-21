@@ -52,7 +52,6 @@ import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import CodeOutlinedIcon from "@mui/icons-material/CodeOutlined";
-import { DeleteIcon } from "lucide-react";
 import { sendNotificationHelper } from "../../../../utils/sendNotificationHelper";
 import UserContext from "../../../../shared/context/UserContext";
 

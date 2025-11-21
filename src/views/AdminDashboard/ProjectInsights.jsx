@@ -45,10 +45,7 @@ export default function ProjectInsights({ projectInsights }) {
         <Divider />
         <Grid container spacing={2} mt={2}>
           {projectInsights.map((p) => (
-            <Grid
-              key={p._id}
-              size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
-            >
+            <Grid key={p._id} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
               <Card
                 sx={{
                   borderRadius: 4,
